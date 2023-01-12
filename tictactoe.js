@@ -25,7 +25,7 @@ let currentPlayer = "X"; //try this just to establish a "player name"; change to
 //I cannot get this to work in my code\\
 //Definiely thought it would be an easy add-on\\
 
-//function changePlayer()
+// function changePlayer()
 //    if (!currentPlayer[0] || !currentPlayer[1]) {
 //        text = `
 //        <input name="player1" placeholder="Enter Player 1">
@@ -33,14 +33,25 @@ let currentPlayer = "X"; //try this just to establish a "player name"; change to
 //        <button class="start">Start Game</button>
 //        `;
 //        } else {
-//
+
 //        if (chickenDinner)
 //        text = `${currentPlayer} is the winner!`;
 //        gameOn = false;
-//        }
+
 //       text = (currentPlayer === "X") ? "O" : "X";
 //    gameUpdates.textContent = `It's ${currentPlayer}'s turn`;
-//}
+// };
+
+function setPlayerName() {
+  let player1Name = document.getElementById("player1-name");
+  player1Name.innerHTML = document.getElementById("player1NameInput").value;
+  player1Name.innerHTML += " VS ";
+  document.getElementById("set1-name").style.display = "none";
+  let player2Name = document.getElementById("player2-name");
+  player2Name.innerHTML = document.getElementById("player2NameInput").value;
+  player2Name.innerHTML += "";
+  document.getElementById("set2-name").style.display = "none";
+}
 
 let gameOn = false; //game remains "off" until gameOn = true AKA start game
 
